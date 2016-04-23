@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carlister", "Carlister\Carlister.csproj", "{906115EC-6CE8-44FE-B71E-F2DC9289B438}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carlister.Web", "Carlister\Carlister.Web.csproj", "{906115EC-6CE8-44FE-B71E-F2DC9289B438}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carlister.Tests", "Carlister.Tests\Carlister.Tests.csproj", "{89443A5F-59D0-4DAF-AFE3-1D934DEA6C23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carlister.BLL", "Carlister.BLL\Carlister.BLL.csproj", "{9798AD33-F316-4C8C-B2C4-5F2205392D94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carlister.DAL", "Carlister.DAL\Carlister.DAL.csproj", "{F6CD6B66-FE1C-4AE6-B7B0-78D4D40841C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carlister.Common", "Carlister.DTO\Carlister.Common.csproj", "{2F384FE7-C17B-44DD-99D9-CC0687807B88}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +27,18 @@ Global
 		{89443A5F-59D0-4DAF-AFE3-1D934DEA6C23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89443A5F-59D0-4DAF-AFE3-1D934DEA6C23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89443A5F-59D0-4DAF-AFE3-1D934DEA6C23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9798AD33-F316-4C8C-B2C4-5F2205392D94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9798AD33-F316-4C8C-B2C4-5F2205392D94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9798AD33-F316-4C8C-B2C4-5F2205392D94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9798AD33-F316-4C8C-B2C4-5F2205392D94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6CD6B66-FE1C-4AE6-B7B0-78D4D40841C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6CD6B66-FE1C-4AE6-B7B0-78D4D40841C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6CD6B66-FE1C-4AE6-B7B0-78D4D40841C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6CD6B66-FE1C-4AE6-B7B0-78D4D40841C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F384FE7-C17B-44DD-99D9-CC0687807B88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F384FE7-C17B-44DD-99D9-CC0687807B88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F384FE7-C17B-44DD-99D9-CC0687807B88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F384FE7-C17B-44DD-99D9-CC0687807B88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

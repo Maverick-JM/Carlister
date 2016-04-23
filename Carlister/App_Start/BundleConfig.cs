@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace Carlister
+namespace Carlister.Web
 {
     public class BundleConfig
     {

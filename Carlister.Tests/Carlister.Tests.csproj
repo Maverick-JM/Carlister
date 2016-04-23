@@ -92,9 +92,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Carlister\Carlister.csproj">
+    <ProjectReference Include="..\Carlister\Carlister.Web.csproj">
       <Project>{906115EC-6CE8-44FE-B71E-F2DC9289B438}</Project>
-      <Name>Carlister</Name>
+      <Name>Carlister.Web</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
