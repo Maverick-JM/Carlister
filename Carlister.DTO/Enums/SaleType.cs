@@ -8,7 +8,7 @@ namespace Carlister.Common.Enums
 {
     public enum SaleType
     {
-        PrivateSale = 1,
-        DealerSale = 2
+        DealerSale,
+        PrivateSale
     }
 }

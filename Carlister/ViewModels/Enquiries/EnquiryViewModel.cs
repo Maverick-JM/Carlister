@@ -20,5 +20,15 @@ namespace Carlister.Web.ViewModels.Enquiries
         [Required]
         [EmailAddress]
         public string Email { get; set; }
+
+        public EnquiryViewModel()
+        {
+
+        }
+
+        public EnquiryViewModel(int carID)
+        {
+            this.CarID = carID;
+        }
     }
 }

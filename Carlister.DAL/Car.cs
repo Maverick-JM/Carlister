@@ -14,7 +14,7 @@ namespace Carlister.DAL
         public string Make { get; set; }
         public string Model { get; set; }
         public int Year { get; set; }
-        public int PriceType { get; set; }
+        public PriceType PriceType { get; set; }
         public decimal? EgcPrice { get; set; }
         public decimal? DapPrice { get; set; }
         public string Email { get; set; }
@@ -22,5 +22,7 @@ namespace Carlister.DAL
         public string Phone { get; set; }
         public string DealerABN { get; set; }
         public string Comments { get; set; }
+
+        public virtual List<Enquiry> Enquiries { get; set; }
     }
 }

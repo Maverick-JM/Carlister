@@ -33,9 +33,9 @@ namespace Carlister.Web.Controllers
 
                     if (car != null)
                     {
-                        var model = new CarDetailsViewModel(car);
+                        CarDetailsViewModel model = new CarDetailsViewModel(car);
 
-                        return View(model);
+                        return View("Index", model);
                     }
                     else
                         return RedirectToAction(nameof(HomeController.Error), "Home");

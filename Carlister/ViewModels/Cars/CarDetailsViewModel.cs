@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Carlister.Web.ViewModels.Enquiries;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,12 +14,20 @@ namespace Carlister.Web.ViewModels.Cars
 
         public CarDetailsViewModel()
         {
-            this.Enquiry = new Enquiries.EnquiryViewModel();
+            
         }
 
-        public CarDetailsViewModel(BLL.Cars.Car car) : this()
+        public CarDetailsViewModel(BLL.Cars.Car car)
         {
             this.Car = car;
+            this.Enquiry = new EnquiryViewModel(car.CarID);
+        }
+
+        public CarDetailsViewModel(BLL.Cars.Car car, EnquiryViewModel enquiry)
+        {
+            this.Car = car;
+            this.Enquiry = enquiry;
+            this.Enquiry.CarID = this.Car.CarID;
         }
     }
 }

@@ -29,7 +29,7 @@ namespace Carlister.DAL.Migrations
                     Model = "Aurion",
                     Phone = "0417385451",
                     SaleType = SaleType.PrivateSale,
-                    PriceType = 2,
+                    PriceType = PriceType.DAP,
                     Year = 2012
                 },
                 new Car()
@@ -44,7 +44,7 @@ namespace Carlister.DAL.Migrations
                     Model = "Aurion",
                     Phone = "0417385451",
                     SaleType = SaleType.PrivateSale,
-                    PriceType = 2,
+                    PriceType = PriceType.DAP,
                     Year = 2012
                 },
                 new Car()
@@ -60,7 +60,7 @@ namespace Carlister.DAL.Migrations
                     Model = "Aurion",
                     Phone = "0417385451",
                     SaleType = SaleType.PrivateSale,
-                    PriceType = 2,
+                    PriceType = PriceType.DAP,
                     Year = 2012
                 },
                 new Car()
@@ -76,7 +76,7 @@ namespace Carlister.DAL.Migrations
                     Model = "Aurion",
                     Phone = "0417385451",
                     SaleType = SaleType.PrivateSale,
-                    PriceType = 2,
+                    PriceType = PriceType.DAP,
                     Year = 2012
                 },
                 new Car()
@@ -92,7 +92,7 @@ namespace Carlister.DAL.Migrations
                     Model = "Aurion",
                     Phone = "0417385451",
                     SaleType = SaleType.PrivateSale,
-                    PriceType = 2,
+                    PriceType = PriceType.DAP,
                     Year = 2012
                 },
                 new Car()
@@ -108,7 +108,7 @@ namespace Carlister.DAL.Migrations
                     Model = "Aurion",
                     Phone = "0417385451",
                     SaleType = SaleType.PrivateSale,
-                    PriceType = 2,
+                    PriceType = PriceType.DAP,
                     Year = 2012
                 });
 

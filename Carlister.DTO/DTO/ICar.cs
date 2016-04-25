@@ -14,7 +14,7 @@ namespace Carlister.Common.DTO
         string Make { get; set; }
         string Model { get; set; }
         int Year { get; set; }
-        int PriceType { get; set; }
+        PriceType PriceType { get; set; }
         decimal? EgcPrice { get; set; }
         decimal? DapPrice { get; set; }
         string Email { get; set; }

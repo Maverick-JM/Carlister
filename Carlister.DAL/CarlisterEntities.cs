@@ -62,6 +62,7 @@ namespace Carlister.DAL
 
         public IEnquiry Add(IEnquiry enquiry)
         {
+            // We don't care about the incoming enquiryId, we're just going to ignore it
             return this.Enquiries.Add(new Enquiry()
             {
                 CarID = enquiry.CarID,

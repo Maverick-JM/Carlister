@@ -73,6 +73,10 @@
     <Compile Include="Migrations\201604250401333_initial.Designer.cs">
       <DependentUpon>201604250401333_initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201604250758036_AddedForeignKeys.cs" />
+    <Compile Include="Migrations\201604250758036_AddedForeignKeys.Designer.cs">
+      <DependentUpon>201604250758036_AddedForeignKeys.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -110,6 +114,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201604250401333_initial.resx">
       <DependentUpon>201604250401333_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604250758036_AddedForeignKeys.resx">
+      <DependentUpon>201604250758036_AddedForeignKeys.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -45,6 +45,7 @@
     <Compile Include="Enquiries\Enquiry.cs" />
     <Compile Include="Enquiries\EnquiryFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\DescriptionAttr.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Carlister.DAL\Carlister.DAL.csproj">

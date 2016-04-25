@@ -12,5 +12,7 @@ namespace Carlister.DAL
         public string Name { get; set; }
         public string Email { get; set; }
         public int CarID { get; set; }
+
+        public virtual Car Car { get; set; }
     }
 }

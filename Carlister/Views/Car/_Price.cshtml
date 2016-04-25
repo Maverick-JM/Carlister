@@ -1,0 +1,33 @@
+﻿@using Carlister.Common.Enums
+@using Carlister.BLL.Tools
+
+@model Carlister.BLL.Cars.Car
+
+@{
+    decimal? price = null;
+
+    if (Model.PriceType == PriceType.DAP)
+    {
+        price = Model.DapPrice;
+    }
+    else if (Model.PriceType == PriceType.EGC)
+    {
+        price = Model.EgcPrice;
+    }
+
+    string priceString;
+
+    if (price.HasValue)
+    {
+        priceString = string.Format("${0:#,##0.00}", price.Value);
+    }
+    else
+    {
+        priceString = "-";
+    }
+}
+
+<dt>@Model.PriceType.GetDescription()</dt>
+<dd class="price">
+    @priceString
+</dd>

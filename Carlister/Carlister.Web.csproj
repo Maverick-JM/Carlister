@@ -213,10 +213,14 @@
     <Content Include="Views\Car\List.cshtml" />
     <Content Include="Views\Car\_CarDetails.cshtml" />
     <Content Include="Views\Car\_CarListItem.cshtml" />
+    <Content Include="Views\Enquiry\_Enquire.cshtml" />
+    <Content Include="Views\Enquiry\ThankYou.cshtml" />
+    <Content Include="Views\Car\Index.cshtml" />
+    <Content Include="Views\Enquiry\List.cshtml" />
+    <Content Include="Views\Car\_Price.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Enquiry\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
