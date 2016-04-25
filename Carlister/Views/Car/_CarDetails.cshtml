@@ -20,10 +20,29 @@
             <dt>Year</dt>
             <dd>@Model.Year</dd>
 
+            @switch (Model.SaleType)
+            {
+                case SaleType.PrivateSale:
+                {
+                    <dt>Contact Name</dt>
+                    <dd>@Model.ContactName</dd>
+                    <dt>Phone</dt>
+                    <dd>@Model.Phone</dd>
+                }
+                break;
+                case SaleType.DealerSale:
+                {
+                    <dt>Dealer ABN</dt>
+                    <dd>@Model.DealerABN</dd>
+                }
+                break;
+            }
+
             <dt>Email</dt>
             <dd><a href="mailto:@Model.Email">@Model.Email</a></dd>
         </dl>
-        <dl class="comments">
+        <dl class="right">
+            @{ Html.RenderPartial("_Price", Model); }
             <dt>Comments</dt>
             <dd>@Model.Comments</dd>
         </dl>

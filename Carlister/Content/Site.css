@@ -50,6 +50,9 @@ ul.listOfCars li {
   background-color: #fff;
   padding: 1em;
 }
+.carView header {
+  margin-bottom: 1em;
+}
 .carView header > a {
   display: block;
   margin: -0.5em;
