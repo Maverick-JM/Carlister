@@ -85,6 +85,21 @@ ul.listOfCars li {
 .carView content > dl dd.price {
   font-size: 2.5em;
 }
+@media (max-width: 399px) {
+  .carView content > dl dd.price {
+    font-size: 1.8em;
+  }
+}
+.carView content > dl.right {
+  max-height: 11.7em;
+  overflow: hidden;
+}
+@media (max-width: 399px) {
+  .carView content > dl.right {
+    max-height: 9em;
+    overflow: hidden;
+  }
+}
 .carView footer {
   border-top: 1px solid #eee;
   padding: 0.5em 0;

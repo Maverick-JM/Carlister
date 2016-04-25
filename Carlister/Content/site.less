@@ -101,11 +101,21 @@ ul.listOfCars {
 
                 &.price {
                     font-size: 2.5em;
+
+                    @media (max-width: 399px) {
+                        font-size: 1.8em;
+                    }
                 }
             }
 
             &.right {
+                max-height: 11.7em;
+                overflow: hidden;
 
+                @media (max-width: 399px) {
+                    max-height: 9em;
+                    overflow: hidden;
+                }
             }
         }
     }
