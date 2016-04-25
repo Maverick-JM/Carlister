@@ -4,13 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Carlister.Common.DTO;
+using Carlister.Common.Data;
+using Carlister.Common.Enums;
 
 namespace Carlister.BLL.Cars
 {
     public class Car
     {
         public int CarID { get; set; }
-        public int SaleType { get; set; }
+        public SaleType SaleType { get; set; }
         public string Make { get; set; }
         public string Model { get; set; }
         public int Year { get; set; }
@@ -28,7 +30,7 @@ namespace Carlister.BLL.Cars
 
         }
 
-        public Car(ICar carData)
+        internal Car(ICar carData)
         {
             CarID = carData.CarID;
             SaleType = carData.SaleType;
@@ -43,6 +45,20 @@ namespace Carlister.BLL.Cars
             Phone = carData.Phone;
             DealerABN = carData.DealerABN;
             Comments = carData.Comments;
+        }
+
+        public static List<Car> GetCars(ICarDataSource db)
+        {
+            return db.GetCars()
+                .ToList()   // Fetch from DB
+                .Select(c => CarFactory.CreateCar(c))
+                .ToList();
+        }
+
+        public static Car GetCar(int carId, ICarDataSource db)
+        {
+            var carData = db.GetCar(carId);
+            return CarFactory.CreateCar(carData);
         }
     }
 }

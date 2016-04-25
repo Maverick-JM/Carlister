@@ -1,11 +1,10 @@
+using System.Data.Entity;
+using System.Linq;
+using Carlister.Common.DTO;
+using Carlister.Common.Data;
+
 namespace Carlister.DAL
 {
-    using System;
-    using System.Data.Entity;
-    using System.Linq;
-    using Carlister.Common.DTO;
-    using Carlister.Common.Data;
-
     public class CarlisterEntities : DbContext, ICarlisterDataSource
     {
         // Your context has been configured to use a 'CarlisterEntities' connection string from your application's 
@@ -40,6 +39,35 @@ namespace Carlister.DAL
         public IEnquiry GetEnquiry(int enquiryID)
         {
             return this.Enquiries.FirstOrDefault(e => e.EnquiryID == enquiryID);
+        }
+
+        public ICar Add(ICar car)
+        {
+            return this.Cars.Add(new Car()
+            {
+                Comments = car.Comments,
+                ContactName = car.ContactName,
+                DapPrice = car.DapPrice,
+                DealerABN = car.DealerABN,
+                EgcPrice = car.EgcPrice,
+                Email = car.Email,
+                Make = car.Make,
+                Model = car.Model,
+                Phone = car.Phone,
+                PriceType = car.PriceType,
+                SaleType = car.SaleType,
+                Year = car.Year
+            });
+        }
+
+        public IEnquiry Add(IEnquiry enquiry)
+        {
+            return this.Enquiries.Add(new Enquiry()
+            {
+                CarID = enquiry.CarID,
+                Email = enquiry.Email,
+                Name = enquiry.Name
+            });
         }
     }
 }

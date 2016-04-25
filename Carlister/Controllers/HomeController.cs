@@ -10,20 +10,11 @@ namespace Carlister.Web.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return RedirectToActionPermanent(nameof(CarController.List), "Car");
         }
 
-        public ActionResult About()
+        public ActionResult Error()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }

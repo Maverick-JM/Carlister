@@ -1,24 +1,91 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  background-color: #eee;
 }
-
+.navbar {
+  background-color: #004f85;
+}
+.navbar .nav.navbar-nav li a,
+.navbar .navbar-brand {
+  color: #fff;
+}
+.navbar .nav.navbar-nav li a:hover,
+.navbar .navbar-brand:hover {
+  color: #b8e2ff;
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
-
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
 .dl-horizontal dt {
-    white-space: normal;
+  white-space: normal;
 }
-
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
 textarea {
-    max-width: 280px;
+  max-width: 280px;
 }
+.jumbotron.error h1 {
+  color: #d11;
+  font-size: 30px;
+}
+ul.listOfCars {
+  list-style-type: none;
+  margin: 0;
+  padding: 2em 5em;
+}
+ul.listOfCars li {
+  padding: 0.5em 0;
+  border-bottom: 1px solid #eee;
+  margin: 0.5em 0;
+}
+.carListItem {
+  display: block;
+  background-color: #fff;
+  padding: 1em;
+}
+.carListItem header > a {
+  display: block;
+  margin: -0.5em;
+  padding: 0.5em 1.5em;
+  color: #fff;
+  background-color: #004f85;
+}
+.carListItem header > a:hover {
+  text-decoration: none;
+  background-color: rgba(0, 79, 133, 0.85);
+}
+.carListItem content > dl {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 49%;
+  padding: 0.5em 1em;
+  margin: 0;
+  vertical-align: top;
+}
+.carListItem content > dl dt {
+  padding: 0.25em 0 0 0;
+  font-size: 0.8em;
+  font-weight: normal;
+  color: #999;
+}
+.carListItem content > dl dd {
+  padding: 0 0 0.25em 0;
+}
+.carListItem footer {
+  border-top: 1px solid #eee;
+  padding: 0.5em 0;
+}
+.carListItem footer .saleType {
+  float: right;
+  opacity: 0.7;
+}
+
+/*# sourceMappingURL=site.css.map */

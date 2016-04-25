@@ -1,0 +1,39 @@
+﻿@using Carlister.BLL.Cars
+@using Carlister.Common.Enums
+@using Carlister.Web.Controllers
+
+@model Car
+
+<div class="carListItem">
+    <header>
+        <a href="@Url.Action(nameof(CarController.Index), "Car", new { id = Model.CarID })">
+            @Model.Year @Model.Make @Model.Model
+        </a>
+    </header>
+    <content>
+        <dl>
+            <dt>Make</dt>
+            <dd>@Model.Make</dd>
+
+            <dt>Model</dt>
+            <dd>@Model.Model</dd>
+
+            <dt>Year</dt>
+            <dd>@Model.Year</dd>
+
+            <dt>Email</dt>
+            <dd><a href="mailto:@Model.Email">@Model.Email</a></dd>
+        </dl>
+        <dl class="comments">
+            <dt>Comments</dt>
+            <dd>@Model.Comments</dd>
+        </dl>
+    </content>
+    <footer>
+        <div class="saleType">
+            @(Model.SaleType == SaleType.DealerSale ? "Dealer Sale" : "Private Sale")
+        </div>
+
+        @Html.ActionLink("Enquire", nameof(CarController.Index), "Car", new { id = Model.CarID }, new { @class = "btn btn-primary" })
+    </footer>
+</div>

@@ -19,33 +19,22 @@ namespace Carlister.Tests.Controllers
             HomeController controller = new HomeController();
 
             // Act
-            ViewResult result = controller.Index() as ViewResult;
+            RedirectResult result = controller.Index() as RedirectResult;
 
             // Assert
             Assert.IsNotNull(result);
+            Assert.IsTrue(result.Permanent);
+            Assert.AreEqual("/Car/List".ToLower(), result.Url.ToLower());
         }
 
         [TestMethod]
-        public void About()
+        public void Error()
         {
             // Arrange
             HomeController controller = new HomeController();
 
             // Act
-            ViewResult result = controller.About() as ViewResult;
-
-            // Assert
-            Assert.AreEqual("Your application description page.", result.ViewBag.Message);
-        }
-
-        [TestMethod]
-        public void Contact()
-        {
-            // Arrange
-            HomeController controller = new HomeController();
-
-            // Act
-            ViewResult result = controller.Contact() as ViewResult;
+            ViewResult result = controller.Error() as ViewResult;
 
             // Assert
             Assert.IsNotNull(result);

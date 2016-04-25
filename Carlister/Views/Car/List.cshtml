@@ -1,7 +1,16 @@
-﻿
+﻿@model Carlister.Web.ViewModels.Cars.CarListViewModel
 @{
     ViewBag.Title = "List of Cars";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>List</h2>
+<h2>List of Cars</h2>
+
+<ul class="listOfCars">
+    @foreach (var c in Model.Cars)
+    {
+        <li>
+            @{ Html.RenderPartial("_CarListItem", c); }
+        </li>
+    }
+</ul>

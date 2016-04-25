@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Carlister.Common.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace Carlister.Common.DTO
     public interface ICar
     {
         int CarID { get; set; }
-        int SaleType { get; set; }
+        SaleType SaleType { get; set; }
         string Make { get; set; }
         string Model { get; set; }
         int Year { get; set; }
