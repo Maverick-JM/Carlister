@@ -1,7 +1,7 @@
 ﻿@using Carlister.Web.Controllers
 @model Carlister.Web.ViewModels.Enquiries.EnquiryViewModel
 
-@using (Html.BeginForm(nameof(EnquiryController.Submit), "Enquiry"))
+@using (Html.BeginForm(nameof(EnquiryController.Submit), "Enquiry", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
     

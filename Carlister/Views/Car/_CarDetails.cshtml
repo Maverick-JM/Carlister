@@ -5,7 +5,7 @@
 @model Car
 
 <h3 class="bgblue">
-    @Html.ActionLink("<", nameof(CarController.List))
+    @Html.ActionLink("<", nameof(CarController.List), "Car")
     @Model.Year @Model.Make @Model.Model
 </h3>
 <div class="carView">

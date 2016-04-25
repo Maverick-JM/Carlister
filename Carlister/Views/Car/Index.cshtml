@@ -12,3 +12,8 @@
 <section>
     @{ Html.RenderPartial("~/Views/Enquiry/_Enquire.cshtml", Model.Enquiry); }
 </section>
+
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+}
