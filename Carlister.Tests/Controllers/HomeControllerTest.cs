@@ -19,12 +19,13 @@ namespace Carlister.Tests.Controllers
             HomeController controller = new HomeController();
 
             // Act
-            RedirectResult result = controller.Index() as RedirectResult;
+            var result = (RedirectToRouteResult)controller.Index();
 
             // Assert
             Assert.IsNotNull(result);
             Assert.IsTrue(result.Permanent);
-            Assert.AreEqual("/Car/List".ToLower(), result.Url.ToLower());
+            Assert.AreEqual("Car", result.RouteValues["controller"]);
+            Assert.AreEqual("List", result.RouteValues["action"]);
         }
 
         [TestMethod]

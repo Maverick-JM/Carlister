@@ -11,7 +11,10 @@ namespace Carlister.BLL.Enquiries
     {
         public static Enquiry CreateEnquiry(IEnquiry enquiryData)
         {
-            return new Enquiry(enquiryData);
+            if (enquiryData != null)
+                return new Enquiry(enquiryData);
+            else
+                return null;
         }
     }
 }

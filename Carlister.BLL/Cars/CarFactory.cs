@@ -8,15 +8,20 @@ namespace Carlister.BLL.Cars
     {
         public static Car CreateCar(ICar carData)
         {
-            switch ((SaleType)carData.SaleType)
+            if (carData != null)
             {
-                case SaleType.PrivateSale:
-                case SaleType.DealerSale:
-                default:
-                    return new Car(carData);
-                    // Alternative: return DefaultCar
-                    throw new NotImplementedException();
+                switch ((SaleType)carData.SaleType)
+                {
+                    case SaleType.PrivateSale:
+                    case SaleType.DealerSale:
+                    default:
+                        return new Car(carData);
+                        // Alternative: return DefaultCar or throw not implemented exception for default
+                        // return child class of abstract Car class for other types
+                }
             }
+            else
+                return null;
         }
     }
 }
